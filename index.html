@@ -22,44 +22,156 @@
     </style>
   </head>
   <body
-    class="h-screen w-screen bg-gradient-to-br from-[#9ec4db] to-[#2b5979] flex justify-center items-center"
+    class="h-screen w-screen bg-gradient-to-br from-[#9ec4db] to-[#2b5979] flex flex-col justify-center items-center"
   >
-    <!--CALCULATOR BODY START-->
-    <div class="bg-white/40 backdrop-blur-sm p-5 rounded-lg shadow-2xl">
-      <form action="" class="flex flex-col justify-center items-center">
-        <!-- FIELD -->
-        <div>
-          <input type="text" readonly />
-        </div>
+    <!-- TITLE -->
+    <h1 class="text-white font-bold text-center tracking-[5px] mb-5">
+      CALCULATOR<br />Tailwind | JavaScript
+    </h1>
+    <!-- CALCULATOR CONTAINER -->
+    <div class="flex items-center justify-center">
+      <!--CALCULATOR BODY START-->
+      <div
+        class="bg-gradient-to-br from-white to-gray-200 p-5 rounded-lg shadow-2xl font-bold"
+      >
+        <form action="" class="flex flex-col justify-center items-center">
+          <!-- DISPLAY FIELD -->
+          <div class="mb-4 w-full">
+            <input
+              type="text"
+              name="display"
+              placeholder="Hey! Test me out!"
+              readonly
+              disabled
+              class="h-16 w-full text-base text-right px-4 bg-transparent border-[1px] border-[#416D8B] rounded-lg selection:shadow-none selection:border-[#416D8B] selection:border-[1px] tracking-[2px]"
+            />
+          </div>
+          <!-- BUTTON CONTAINER -->
+          <div class="grid grid-cols-4 gap-x-8">
+            <!-- FIRST ROW OF BUTTONS -->
+            <input
+              type="button"
+              value="AC"
+              onclick="display.value=''"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="DE"
+              onclick="display.value = display.value.toString().slice(0,-1)"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="."
+              onclick="display.value+='.'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="/"
+              onclick="display.value+='/'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
 
-        <div class="grid grid-cols-4 gap-4">
-          <!-- FIRST ROW OF BUTTONS -->
-          <button>AC</button>
-          <button>DE</button>
-          <button>.</button>
-          <button>/</button>
-          <!-- SECOND ROW OF BUTTONS -->
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button>*</button>
-          <!-- THIRD ROW OF BUTTONS -->
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>-</button>
-          <!-- FOURTH ROW OF BUTTONS -->
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>+</button>
-          <!-- FIFTH ROW OF BUTTONS -->
-          <button>00</button>
-          <button>0</button>
-          <button class="col-span-2">=</button>
-        </div>
-      </form>
+            <!-- SECOND ROW OF BUTTONS -->
+            <input
+              type="button"
+              value="7"
+              onclick="display.value+='7'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="8"
+              onclick="display.value+='8'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="9"
+              onclick="display.value+='9'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="*"
+              onclick="display.value+='*'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <!-- THIRD ROW OF BUTTONS -->
+            <input
+              type="button"
+              value="4"
+              onclick="display.value+='4'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="5"
+              onclick="display.value+='5'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="6"
+              onclick="display.value+='6'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="-"
+              onclick="display.value+='-'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <!-- FOURTH ROW OF BUTTONS -->
+            <input
+              type="button"
+              value="1"
+              onclick="display.value+='1'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="2"
+              onclick="display.value+='2'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="3"
+              onclick="display.value+='3'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="+"
+              onclick="display.value+='+'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <!-- FIFTH ROW OF BUTTONS -->
+            <input
+              type="button"
+              value="00"
+              onclick="display.value+='00'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="0"
+              onclick="display.value+='0'"
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+            <input
+              type="button"
+              value="6"
+              onclick=""
+              class="w-12 h-16 flex items-center justify-center bg-transparent rounded-lg hover:bg-gray-200 duration-200"
+            />
+          </div>
+        </form>
+      </div>
+      <!--CALCULATOR BODY END-->
     </div>
-    <!--CALCULATOR BODY END-->
   </body>
 </html>
