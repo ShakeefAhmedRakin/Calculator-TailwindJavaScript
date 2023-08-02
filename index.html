@@ -21,13 +21,15 @@
       }
     </style>
   </head>
-  <body class="h-screen w-screen bg-cyan-50 flex justify-center items-center">
+  <body
+    class="h-screen w-screen bg-gradient-to-br from-[#9ec4db] to-[#2b5979] flex justify-center items-center"
+  >
     <!--CALCULATOR BODY START-->
-    <div class="bg-slate-100 p-5">
+    <div class="bg-white/40 backdrop-blur-sm p-5">
       <form action="" class="flex flex-col justify-center items-center">
         <!-- FIELD -->
         <div>
-          <input type="text" />
+          <input type="text" readonly />
         </div>
         <!-- FIRST ROW OF BUTTONS -->
         <div>
@@ -48,9 +50,16 @@
           <button>4</button>
           <button>5</button>
           <button>6</button>
-          <button>END--</button>
+          <button>-</button>
         </div>
         <!-- FOURTH ROW OF BUTTONS -->
+        <div>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>+</button>
+        </div>
+        <!-- FIFTH ROW OF BUTTONS -->
         <div>
           <button>00</button>
           <button>0</button>
